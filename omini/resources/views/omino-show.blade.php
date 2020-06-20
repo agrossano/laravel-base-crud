@@ -5,11 +5,11 @@
     <h2>{{ session('success') }}</h2>
   @endif
 
-  NAME: {{ $omino['first name']}} <br>
-  LAST NAME: {{ $omino['last name']}} <br>
+  NAME: {{ $omino['first_name']}} <br>
+  LAST NAME: {{ $omino['last_name']}} <br>
   CODE: {{ $omino['code']}} <br>
   STATE: {{ $omino['state']}} <br>
-  PHONE NUMBER: {{ $omino['phone number']}} <br>
+  PHONE NUMBER: {{ $omino['phone_number']}} <br>
   ROLE: {{ $omino['role']}} <br>
   <br>
   <br>

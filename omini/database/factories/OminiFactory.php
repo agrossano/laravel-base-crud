@@ -7,11 +7,11 @@ use Faker\Generator as Faker;
 
 $factory->define(Omino::class, function (Faker $faker) {
     return [
-      'first name' => $faker  -> firstName(),
-      'last name' => $faker   -> lastName(),
+      'first_name' => $faker  -> firstName(),
+      'last_name' => $faker   -> lastName(),
       'code'=> $faker         -> numerify($string = '#####'),
       'state'=> $faker        -> state(),
-      'phone number'=> $faker -> phoneNumber(),
+      'phone_number'=> $faker -> phoneNumber(),
       'role'=> $faker         -> jobTitle()
     ];
 });

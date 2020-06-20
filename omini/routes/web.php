@@ -9,3 +9,5 @@ Route::get('/omino/{id}', 'OminiController@show') -> name('show');
 Route::get('/omino/delete/{id}', 'OminiController@destroy') -> name('destroy');
 Route::get('/edit/{id}', 'OminiController@edit') -> name('edit');
 Route::post('/update/{id}', 'OminiController@update') -> name('update');
+Route::get('/create', 'OminiController@create') -> name('create');
+Route::get('/store', 'OminiController@store') -> name('store');

@@ -26,7 +26,10 @@ class OminiController extends Controller
     $omino = Omino::findOrFail($id);
     $omino->delete();
 
-    return redirect() -> route('home');
+    return redirect() 
+                    -> route('home')
+                    -> withSuccess($omino['first_name']
+                                  . " successfully deleted");
 
   }
 
@@ -64,7 +67,41 @@ class OminiController extends Controller
     return redirect()
               -> route('show', $id)
               -> withSuccess("Updated "  
-                          . $omino['first_name']
+                          . $omin['first_name']
                           . " successfully");
+    }
+
+    public function create() {
+
+      return view('omino-create');
+    }
+
+    public function store(Request $request) {
+
+      $validatedData = $request -> validate([
+        'first_name' => 'required',
+        'last_name' => 'required',
+        'code' => 'required',
+        'state' => 'required',
+        'phone_number' => 'required',
+        'role' => 'required',
+      ]);
+  
+      $omino = new Omino;
+  
+      $omino -> first_name = $validatedData['first_name'];
+      $omino -> last_name = $validatedData['last_name'];
+      $omino -> code = $validatedData['code'];
+      $omino -> state = $validatedData['state'];
+      $omino -> phone_number = $validatedData['phone_number'];
+      $omino -> role = $validatedData['role'];
+      
+      $omino -> save();
+  
+      return redirect()
+                -> route('home')
+                -> withSuccess($omino['first_name']
+                            . " created successfully");
+
     }
 }

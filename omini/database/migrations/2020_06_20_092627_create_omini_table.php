@@ -14,15 +14,15 @@ class CreateOminiTable extends Migration
     public function up()
     {
         Schema::create('omini', function (Blueprint $table) {
-            $table -> id();
-            $table -> string('first name');
-            $table -> string('last name');
-            $table -> string('code');
-            $table -> string('state');
-            $table -> string('phone number');
-            $table -> string('role');
-          
-            $table->timestamps();
+          $table -> id();
+          $table -> string('first_name');
+          $table -> string('last_name');
+          $table -> string('code');
+          $table -> string('state');
+          $table -> string('phone_number');
+          $table -> string('role');
+        
+          $table->timestamps();
         });
     }
 

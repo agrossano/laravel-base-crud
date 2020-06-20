@@ -12,35 +12,35 @@
 </div>
 @endif
 
-<form action="{{ route('update', $omino['id']) }}" method="post">
+<form action="{{ route('store') }}" method="get">
   @csrf
   @method('POST')
   
   <label for="first_name">NAME</label>
-  <input type="text" name="first_name" value="{{ $omino['first_name']}}">
+  <input type="text" name="first_name" value="">
   <br>
 
   <label for="last_name">LAST NAME</label>
-  <input type="text" name="last_name" value="{{ $omino['last_name']}}">
+  <input type="text" name="last_name" value="">
   <br>
 
   <label for="code">CODE</label>
-  <input type="text" name="code" value="{{ $omino['code']}}">
+  <input type="text" name="code" value="">
   <br>
 
   <label for="state">STATE</label>
-  <input type="text" name="state" value="{{ $omino['state']}}">
+  <input type="text" name="state" value="">
   <br>
 
   <label for="phone number">PHONE NUMBER</label>
-  <input type="text" name="phone_number" value="{{ $omino['phone_number']}}">
+  <input type="text" name="phone_number" value="">
   <br>
 
   <label for="role">ROLE</label>
-  <input type="text" name="role" value="{{ $omino['role']}}">
+  <input type="text" name="role" value="">
   <br>
   <br>
-  <input type="submit" name="submit" value="UPDATE">
+  <input type="submit" name="submit" value="CREATE">
 
 </form>
   
