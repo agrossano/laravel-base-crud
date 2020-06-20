@@ -67,7 +67,7 @@ class OminiController extends Controller
     return redirect()
               -> route('show', $id)
               -> withSuccess("Updated "  
-                          . $omin['first_name']
+                          . $omino['first_name']
                           . " successfully");
     }
 
